@@ -26,7 +26,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                deploy adapters: [tomcat9(credentialsId: '068bd52e-409e-4ee4-bade-ac96d5a6e2d3', path: '', url: 'http://172.31.7.35:8080/')], contextPath: 'java-tomcat-jenkinsfile-sample', war: '**/*.war'
+             // deploy adapters: [tomcat9(credentialsId: '068bd52e-409e-4ee4-bade-ac96d5a6e2d3', path: '', url: 'http://172.31.7.35:8080/')], contextPath: 'java-tomcat-jenkinsfile-sample', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: '955d0780-edc1-407f-8fec-ff488e0931be', path: '', url: 'http://172.31.86.151:8080/')], contextPath: 'java-tomcat-jenkinsfile-sample', war: '**/*.war'
             }
         }
     }
