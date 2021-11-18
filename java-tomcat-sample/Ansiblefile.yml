@@ -1,0 +1,11 @@
+---
+- name: Deployment ansible to tomcat server
+  hosts: web-servers
+  become: true
+  tasks:
+    - name: copy war on to tomcat server
+      copy:
+        src: 
+        dest: /opt/apache-tomcat-9.0.35/webapps
+
+    
